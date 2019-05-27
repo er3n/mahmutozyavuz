@@ -3,6 +3,7 @@ var router = express.Router();
 var menuApi = require("../api/menuApi");
 
 /* GET home page. */
+/*
 router.get("/", function(req, res, next) {
   menuApi
     .getMenu()
@@ -22,6 +23,13 @@ router.get("/", function(req, res, next) {
       });
     })
     .catch(err => console.log(err));
+});
+*/
+
+router.get("/", function(req, res, next) {
+  res.render("home/home", {
+    title: "Mahmut Özyavuz | Resmi Web Sayfası"
+  });
 });
 
 module.exports = router;
