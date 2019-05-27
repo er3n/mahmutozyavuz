@@ -21,6 +21,9 @@
               li
                 a(href='/icerik') HARRAN
                 ul.sub-menu
+                  each menuItemHarran in menuHarran
+                    li
+                      a(href='/icerik') #{menuItemHarran.title}
                   li
                     a(href='/icerik') TAR&Idot;H&Ccedil;ES&Idot;
                   li
