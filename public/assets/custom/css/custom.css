@@ -6,3 +6,21 @@
 .footer-middle {
   margin-top: 20px;
 }
+
+.nivo-caption {
+  background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+}
+
+.breatcome_area {
+  background: transparent url(/assets/custom/images/breatcome.jpg) 0% 0% / cover
+    repeat scroll !important;
+}
+
+.breatcome_content * {
+  color: white !important;
+  text-align: left;
+}
+
+.em-image {
+  opacity: 0.2;
+}
