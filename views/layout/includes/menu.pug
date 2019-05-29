@@ -8,7 +8,7 @@
             a.main_sticky_main_l(href='/' title='Mahmut Özyavuz')
               img(src='assets/custom/images/logo.svg' alt='Mahmut Özyavuz Logo' style='height: 96px; margin-top: -0px')
             a.main_sticky_l(href='/' title='Mahmut Özyavuz Logo' style='height: 96px; margin-top: -0px')
-              img(src='assets/custom/images/logo.svg' alt='astute')
+              img(src='assets/custom/images/logo.svg' alt='Mahmut Özyavuz')
         // END LOGO
         // MAIN MENU
         .col-md-9.col-sm-9.col-xs-8
@@ -21,39 +21,15 @@
               li
                 a(href='/icerik') HARRAN
                 ul.sub-menu
-                  li
-                    a(href='/icerik') TAR&Idot;H&Ccedil;ES&Idot;
-                  li
-                    a(href='blog-left-sidebar.html') K&Ouml;YLER&Idot;M&Idot;Z
-                  li
-                    a(href='blog-left-sidebar.html') N&Uuml;FUSU
-                  li
-                    a(href='blog-left-sidebar.html') SOSYAL HAYAT
-                  li
-                    a(href='blog-left-sidebar.html') TARIM VE HAYVANCULIK
-                  li
-                    a(href='blog-left-sidebar.html') E&Gbreve;&Idot;T&Idot;M VE K&Uuml;LT&Uuml;R
-                  li
-                    a(href='blog-left-sidebar.html') CO&Gbreve;RAF&Idot; YAPI
-                  li
-                    a(href='blog-left-sidebar.html') EKONOM&Idot;K DURUMU
-                  li
-                    a(href='blog-left-sidebar.html') SA&Gbreve;LIK &Idot;MKANLARI
-                  li
-                    a(href='blog-left-sidebar.html') GEZ&Idot;LECEK YERLER
-                  li
-                    a(href='blog-left-sidebar.html') ULA&Scedil;IM
-                  li
-                    a(href='blog-left-sidebar.html') HARRAN TELEFON REHBER&Idot;
+                  each harranNavigation in harranNavigations
+                    li
+                      a(href='/posts/' + harranNavigation.post.id ) #{harranNavigation.title}
               li
                 a(href='galeri') MEDYA TANITIM
                 ul.sub-menu
-                  li
-                    a(href='blog-left-sidebar.html') BASIN
-                  li
-                    a(href='blog-left-sidebar.html') FOTO GALER&Idot;
-                  li
-                    a(href='blog-left-sidebar.html') SE&Ccedil;&Idot;M M&Uuml;Z&Idot;KLER&Idot;
+                  each galeryNavigation in galeryNavigations
+                    li
+                      a(href='/galerys/' + galeryNavigation.galery.id ) #{galeryNavigation.title}
               li
                 a(href='/blog') Blog
             .donate-btn-header
@@ -66,43 +42,22 @@
     nav
       ul.main-menu.clearfix
         li
-          a(href='contact.html') ANASAYFA
+          a(href='/') ANASAYFA
         li
-          a(href='blog.html') HARRAN
+          a(href='/hakkinda') HAKKINDA
+        li
+          a(href='#') HARRAN
           ul.sub-menu
-            li
-              a(href='blog-left-sidebar.html') TAR&Idot;H&Ccedil;ES&Idot;
-            li
-              a(href='blog-left-sidebar.html') K&Ouml;YLER&Idot;M&Idot;Z
-            li
-              a(href='blog-left-sidebar.html') N&Uuml;FUSU
-            li
-              a(href='blog-left-sidebar.html') SOSYAL HAYAT
-            li
-              a(href='blog-left-sidebar.html') TARIM VE HAYVANCULIK
-            li
-              a(href='blog-left-sidebar.html') E&Gbreve;&Idot;T&Idot;M VE K&Uuml;LT&Uuml;R
-            li
-              a(href='blog-left-sidebar.html') CO&Gbreve;RAF&Idot; YAPI
-            li
-              a(href='blog-left-sidebar.html') EKONOM&Idot;K DURUMU
-            li
-              a(href='blog-left-sidebar.html') SA&Gbreve;LIK &Idot;MKANLARI
-            li
-              a(href='blog-left-sidebar.html') GEZ&Idot;LECEK YERLER
-            li
-              a(href='blog-left-sidebar.html') ULA&Scedil;IM
-            li
-              a(href='blog-left-sidebar.html') HARRAN TELEFON REHBER&Idot;
+            each harranNavigation in harranNavigations
+              li
+                a(href='/posts/' + harranNavigation.post.id ) #{harranNavigation.title}
         li
-          a(href='blog.html') MEDYA TANITIM
+          a(href='galeri') MEDYA TANITIM
           ul.sub-menu
-            li
-              a(href='blog-left-sidebar.html') BASIN
-            li
-              a(href='blog-left-sidebar.html') FOTO GALER&Idot;
-            li
-              a(href='blog-left-sidebar.html') SE&Ccedil;&Idot;M M&Uuml;Z&Idot;KLER&Idot;
+            each galeryNavigation in galeryNavigations
+              li
+                a(href='/galerys/' + galeryNavigation.galery.id ) #{galeryNavigation.title}
         li
-          a(href='contact.html') &Idot;LET&Idot;&Scedil;&Idot;M
+          a(href='/blog') Blog
+      .donate-btn-header
 // END MOBILE MENU AREA
