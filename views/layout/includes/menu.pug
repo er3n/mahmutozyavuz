@@ -6,9 +6,9 @@
         .col-md-3.col-sm-3.col-xs-4
           .logo
             a.main_sticky_main_l(href='/' title='Mahmut Özyavuz')
-              img(src='assets/custom/images/logo.svg' alt='Mahmut Özyavuz Logo' style='height: 96px; margin-top: -0px')
+              img(src='/assets/custom/images/logo.svg' alt='Mahmut Özyavuz Logo' style='height: 96px; margin-top: -0px')
             a.main_sticky_l(href='/' title='Mahmut Özyavuz Logo' style='height: 96px; margin-top: -0px')
-              img(src='assets/custom/images/logo.svg' alt='Mahmut Özyavuz')
+              img(src='/assets/custom/images/logo.svg' alt='Mahmut Özyavuz')
         // END LOGO
         // MAIN MENU
         .col-md-9.col-sm-9.col-xs-8
@@ -52,11 +52,11 @@
               li
                 a(href='/posts/' + harranNavigation.post.id ) #{harranNavigation.title}
         li
-          a(href='galeri') MEDYA TANITIM
+          a(href='#') MEDYA TANITIM
           ul.sub-menu
             each galeryNavigation in galeryNavigations
               li
-                a(href='/galerys/' + galeryNavigation.galery.id ) #{galeryNavigation.title}
+                a(href='/galeries/' + galeryNavigation.galery.id ) #{galeryNavigation.title}
         li
           a(href='/blog') Blog
       .donate-btn-header

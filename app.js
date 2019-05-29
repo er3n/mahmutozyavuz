@@ -40,7 +40,7 @@ app.use("/", homeRouter);
 app.use("/hakkinda", aboutRouter);
 app.use("/posts", postsRouter);
 app.use("/blog", blogRouter);
-app.use("/galeri", galeryRouter);
+app.use("/galeries", galeryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

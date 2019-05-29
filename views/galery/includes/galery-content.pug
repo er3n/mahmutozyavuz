@@ -8,15 +8,16 @@
           h2 Medya
           // IMAGE
           .em-image
-            img(src='assets/images/icon.jpg' alt='title image')
+            img(src='/assets/images/icon.jpg' alt='title image')
     .row.li
       .em_load
         // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.c.d
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/1.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/1.jpg')
-                  i.fa.fa-search
+        each media in galery.medias
+          .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.c.d
+            .single_portfolio
+              .single_portfolio_inner
+                .single_portfolio_thumb
+                  img(src=media.url alt=media.title)
+                .single_portfolio_icon
+                  a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href=media.url)
+                    i.fa.fa-search
