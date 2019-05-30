@@ -12,8 +12,7 @@
 }
 
 .breatcome_area {
-  background: transparent url(/assets/custom/images/breatcome.jpg) 0% 0% / cover
-    repeat scroll !important;
+    background: transparent url(/assets/images/baslikcopy.jpg) 0% 0% / cover repeat scroll !important;
 }
 
 .breatcome_content * {
@@ -24,3 +23,23 @@
 .em-image {
   opacity: 0.2;
 }
+
+.baskan-foto {
+    position: absolute;
+    top: 106px;
+    left: 86%;
+    margin-left: -150px;
+    z-index: 10;
+    width: 300px;
+    height: 263px;
+}
+.em-slider-descript {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .em-slider-descript{
+        display:none;
+    }
+}
+
