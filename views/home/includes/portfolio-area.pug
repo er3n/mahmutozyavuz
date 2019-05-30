@@ -11,9 +11,11 @@
             img(src='assets/images/icon.jpg' alt='title image')
         .portfolio_menu
           ul.filter_menu
-            li.current_menu_item(data-filter='*') Tümü
-            each galeryNavigation in galeryNavigations
-              li(data-filter='.sliderOf_' + galeryNavigation.id) #{galeryNavigation.title}
+            each galeryNavigation, index in galeryNavigations
+              if index == 0
+                li.current_menu_item(data-filter='.sliderOf_' + galeryNavigation.id) #{galeryNavigation.title}
+              else
+                li(data-filter='.sliderOf_' + galeryNavigation.id) #{galeryNavigation.title}
     .row.li
       .em_load
         // single portfoloi
@@ -25,12 +27,6 @@
                   .single_portfolio_thumb
                     .card-bgimg(style='background-image:url(' + media.url + ')')
                   .single_portfolio_icon
-                    a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='/assets/images/1.jpg')
+                    a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href=media.url)
                       i.fa.fa-search
-                  .portfolio_content
-                    .portfolio_content_inner
-                      h3
-                        a(href='/galeries/' + galeryNavigation.galery.id) Daha fazla bilgi...
-                      p
-                        span Bas&imath;n
         

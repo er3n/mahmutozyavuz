@@ -121,7 +121,7 @@
       $portfolio.isotope({
         itemSelector: ".grid-item",
 
-        filter: "*",
+        filter: ".sliderOf_13",
 
         resizesContainer: true,
 

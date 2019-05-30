@@ -13,6 +13,7 @@ var aboutRouter = require("./routes/about");
 var postsRouter = require("./routes/posts");
 var blogRouter = require("./routes/blog");
 var galeryRouter = require("./routes/galery");
+var contactRouter = require("./routes/contact");
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use("/hakkinda", aboutRouter);
 app.use("/posts", postsRouter);
 app.use("/blog", blogRouter);
 app.use("/galeries", galeryRouter);
+app.use("/contact", contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

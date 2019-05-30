@@ -1,6 +1,5 @@
 .em-slider-descript {
   font-size: 30px;
-  margin-left: 100px !important;
 }
 
 .footer-middle {
@@ -12,7 +11,8 @@
 }
 
 .breatcome_area {
-    background: transparent url(/assets/images/baslikcopy.jpg) 0% 0% / cover repeat scroll !important;
+  background: transparent url(/assets/images/baslikcopy.jpg) 0% 0% / cover
+    repeat scroll !important;
 }
 
 .breatcome_content * {
@@ -25,44 +25,42 @@
 }
 
 .baskan-foto {
-    position: absolute;
-    top: 154px;
-    left: 86%;
-    margin-left: -150px;
-    z-index: 10;
-    width: 272px;
-    height: 263px;
+  position: absolute;
+  top: 154px;
+  left: 86%;
+  margin-left: -150px;
+  z-index: 10;
+  width: 272px;
+  height: 263px;
 }
 .em-slider-descript {
-    display: block;
+  display: block;
 }
 
 @media (max-width: 767px) {
-    .em-slider-descript{
-        display:none;
-    }
+  .em-slider-descript {
+    display: none;
+  }
   .baskan-foto {
-        position: absolute;
+    position: absolute;
     top: 118px;
     left: 94%;
     margin-left: -150px;
     z-index: 10;
     width: 170px;
     height: 263px;
+  }
 }
-}
-
 
 .card-bgimg {
-    overflow: hidden;
-    /* height: 0; */
-    padding-top: 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
+  overflow: hidden;
+  /* height: 0; */
+  padding-top: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
-
