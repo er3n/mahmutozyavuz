@@ -26,11 +26,11 @@
 
 .baskan-foto {
     position: absolute;
-    top: 106px;
+    top: 154px;
     left: 86%;
     margin-left: -150px;
     z-index: 10;
-    width: 300px;
+    width: 272px;
     height: 263px;
 }
 .em-slider-descript {
@@ -41,6 +41,15 @@
     .em-slider-descript{
         display:none;
     }
+  .baskan-foto {
+        position: absolute;
+    top: 118px;
+    left: 94%;
+    margin-left: -150px;
+    z-index: 10;
+    width: 170px;
+    height: 263px;
+}
 }
 
 
