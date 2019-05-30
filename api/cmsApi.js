@@ -18,10 +18,15 @@ const getAnnouncements = () => {
   return axios.get(CMS_BASE_PATH + "/announcements");
 };
 
+const getBlogs = () => {
+  return axios.get(CMS_BASE_PATH + "/blogs");
+};
+
 module.exports = {
   CMS_BASE_PATH: CMS_BASE_PATH,
   getNavigations: getNavigations,
   getPost: getPost,
   getGalery: getGalery,
-  getAnnouncements: getAnnouncements
+  getAnnouncements: getAnnouncements,
+  getBlogs: getBlogs
 };

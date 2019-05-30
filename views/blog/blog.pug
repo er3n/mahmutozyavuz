@@ -10,18 +10,19 @@ block content
             h2 BLOG
             p.text-alignm
       .row
-        .col-md-4.col-sm-6
-          .astute-single-blog_mg
-            .astute-single-blog_adn
-              .blog_adn_thumb_inner
-                .astute-blog-thumb_adn
-                  a(href='single-blog.html')
-                    img(src='/assets/images/blog2.jpg' alt='blog1')
-                  .blog_add_icon
-                    a(href='single-blog.html')
-                      i.fa.fa-link
-              .em-blog-content-area_adn
-                .learn_more_adn
-                  a.learn_btn.adnbtn2(href='single-blog.html')
-                    | Daha Fazla Bilgi 
-                    i.fa.fa-long-arrow-right
+        each blog in blogs
+          .col-md-4.col-sm-6
+            .astute-single-blog_mg
+              .astute-single-blog_adn
+                .blog_adn_thumb_inner
+                  .astute-blog-thumb_adn
+                    a(href='/posts/' + blog.post.id)
+                      img(src=blog.image.url alt='blog1')
+                    .blog_add_icon
+                      a(href='/posts/' + blog.post.id)
+                        i.fa.fa-link
+                .em-blog-content-area_adn
+                  .learn_more_adn
+                    a.learn_btn.adnbtn2(href='/posts/' + blog.post.id)
+                      | Daha Fazla Bilgi 
+                      i.fa.fa-long-arrow-right
