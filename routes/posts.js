@@ -12,7 +12,10 @@ router.get("/:id", function(req, res, next) {
   cmsApi.getPost(req.params.id).then(postResponse => {
     const post = postResponse.data;
     post.content = mdToHtml(post.content);
-    res.render("post/posts", { title: "İçerik", post: postResponse.data });
+    res.render("post/posts", {
+      title: postResponse.data.title,
+      post: postResponse.data
+    });
   });
 });
 
