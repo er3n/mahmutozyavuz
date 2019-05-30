@@ -7,25 +7,15 @@
           h2 Tan&imath;t&imath;m Videolar&imath;
           p.text-alignm Mahmut &Ouml;zyavuz&apos;a ait tan&imath;t&imath;m videolar&imath;n&imath; a&scedil;a&gbreve;&imath;dan g&ouml;r&uuml;nt&uuml;leyebilirsiniz.
     .row
-      .col-md-6.col-sm-12
-        .video_area
-          .col-md-12
-            .tab_content1
-              .single_video
-                .video_image
-                  img(src='/assets/images/vots.jpg' alt='')
-                .choose_video_icon
-                  .video_icon
-                    a.video-vemo-icon.venobox.vbox-item(data-vbtype='youtube' data-autoplay='true' href='https://youtu.be/BS4TUd7FJSg')
-                      i.fa.fa-youtube-play
-      .col-md-6.col-sm-12
-        .video_area
-          .col-md-12
-            .tab_content1
-              .single_video
-                .video_image
-                  img(src='/assets/images/vots.jpg' alt='')
-                .choose_video_icon
-                  .video_icon
-                    a.video-vemo-icon.venobox.vbox-item(data-vbtype='youtube' data-autoplay='true' href='https://youtu.be/BS4TUd7FJSg')
-                      i.fa.fa-youtube-play
+      each video in videos
+        .col-md-6.col-sm-12
+          .video_area
+            .col-md-12
+              .tab_content1
+                .single_video
+                  .video_image
+                    img(src=video.image.url alt=video.title)
+                  .choose_video_icon
+                    .video_icon
+                      a.video-vemo-icon.venobox.vbox-item(data-vbtype='youtube' data-autoplay='true' href=video.youtubelink)
+                        i.fa.fa-youtube-play

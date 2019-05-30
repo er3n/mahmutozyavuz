@@ -22,11 +22,16 @@ const getBlogs = () => {
   return axios.get(CMS_BASE_PATH + "/blogs");
 };
 
+const getVideos = () => {
+  return axios.get(CMS_BASE_PATH + "/videos");
+};
+
 module.exports = {
   CMS_BASE_PATH: CMS_BASE_PATH,
   getNavigations: getNavigations,
   getPost: getPost,
   getGalery: getGalery,
   getAnnouncements: getAnnouncements,
-  getBlogs: getBlogs
+  getBlogs: getBlogs,
+  getVideos: getVideos
 };
