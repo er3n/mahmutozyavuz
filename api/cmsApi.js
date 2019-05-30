@@ -14,9 +14,14 @@ const getGalery = id => {
   return axios.get(CMS_BASE_PATH + "/galeries/" + id);
 };
 
+const getAnnouncements = () => {
+  return axios.get(CMS_BASE_PATH + "/announcements");
+};
+
 module.exports = {
   CMS_BASE_PATH: CMS_BASE_PATH,
   getNavigations: getNavigations,
   getPost: getPost,
-  getGalery: getGalery
+  getGalery: getGalery,
+  getAnnouncements: getAnnouncements
 };

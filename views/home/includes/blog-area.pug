@@ -12,79 +12,23 @@
           p.text-alignm G&uuml;ncel duyurular&imath; ve detaylar&imath;n&imath; a&scedil;a&gbreve;&imath;da yer alan alandan g&ouml;rebilirsiniz.
     .row
       .blog_carousel.owl-carousel.curosel-style
-        .col-md-12
-          .astute-single-blog_adn
-            // BLOG THUMB
-            .blog_adn_thumb_inner
-              .astute-blog-thumb_adn
-                a(href='single-blog.html')
-                  img(src='/assets/images/blog2.jpg' alt='blog1')
-                .blog_add_icon
-                  a(href='single-blog.html')
-                    i.fa.fa-link
-              // BLOG TITLE
-              .blog-page-title_adn2
-                h2
-                  a(href='single-blog.html') Buraya Duyuru Başlığı
-            .em-blog-content-area_adn
-              .learn_more_adn
-                a.learn_btn.adnbtn2(href='single-blog.html')
-                  | Daha Fazla Bilgi
-                  i.fa.fa-long-arrow-right
-        .col-md-12
-          .astute-single-blog_adn
-            // BLOG THUMB
-            .blog_adn_thumb_inner
-              .astute-blog-thumb_adn
-                a(href='single-blog.html')
-                  img(src='/assets/images/blog1.jpg' alt='')
-                .blog_add_icon
-                  a(href='single-blog.html')
-                    i.fa.fa-link
-              // BLOG TITLE
-              .blog-page-title_adn2
-                h2
-                  a(href='single-blog.html') Buraya Duyuru Başlığı
-            .em-blog-content-area_adn
-              .learn_more_adn
-                a.learn_btn.adnbtn2(href='single-blog.html')
-                  | Daha Fazla Bilgi
-                  i.fa.fa-long-arrow-right
-        .col-md-12
-          .astute-single-blog_adn
-            // BLOG THUMB
-            .blog_adn_thumb_inner
-              .astute-blog-thumb_adn
-                a(href='single-blog.html')
-                  img(src='/assets/images/blog3.jpg' alt='')
-                .blog_add_icon
-                  a(href='single-blog.html')
-                    i.fa.fa-link
-              // BLOG TITLE
-              .blog-page-title_adn2
-                h2
-                  a(href='single-blog.html') Grow your awesome Idea
-            .em-blog-content-area_adn
-              .learn_more_adn
-                a.learn_btn.adnbtn2(href='single-blog.html')
-                  | Daha Fazla Bilgi
-                  i.fa.fa-long-arrow-right
-        .col-md-12
-          .astute-single-blog_adn
-            // BLOG THUMB
-            .blog_adn_thumb_inner
-              .astute-blog-thumb_adn
-                a(href='single-blog.html')
-                  img(src='/assets/images/blog1.jpg' alt='')
-                .blog_add_icon
-                  a(href='single-blog.html')
-                    i.fa.fa-link
-              // BLOG TITLE
-              .blog-page-title_adn2
-                h2
-                  a(href='single-blog.html') Buraya Duyuru Başlığı
-            .em-blog-content-area_adn
-              .learn_more_adn
-                a.learn_btn.adnbtn2(href='single-blog.html')
-                  | Daha Fazla Bilgi
-                  i.fa.fa-long-arrow-right
+        each announcement in announcements
+          .col-md-12
+            .astute-single-blog_adn
+              // BLOG THUMB
+              .blog_adn_thumb_inner
+                .astute-blog-thumb_adn
+                  a(href='/posts/' + announcement.id )
+                    img(src=announcement.image.url alt=announcement.title)
+                  .blog_add_icon
+                    a(href='/posts/' + announcement.id )
+                      i.fa.fa-link
+                // BLOG TITLE
+                .blog-page-title_adn2
+                  h2
+                    a(href='/posts/' + announcement.post.id ) #{announcement.title}
+              .em-blog-content-area_adn
+                .learn_more_adn
+                  a.learn_btn.adnbtn2(href='/posts/' + announcement.post.id )
+                    | Daha Fazla Bilgi
+                    i.fa.fa-long-arrow-right

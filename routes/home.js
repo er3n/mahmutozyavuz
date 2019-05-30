@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var cmsApi = require("../api/cmsApi");
 
 /* GET home page. */
 /*
@@ -26,8 +27,12 @@ router.get("/", function(req, res, next) {
 */
 
 router.get("/", function(req, res, next) {
-  res.render("home/home", {
-    title: "Mahmut Özyavuz | Resmi Web Sayfası"
+  cmsApi.getAnnouncements().then(announcementsResponse => {
+    console.log(res.locals.galeryNavigations);
+    res.render("home/home", {
+      title: "Mahmut Özyavuz | Resmi Web Sayfası",
+      announcements: announcementsResponse.data
+    });
   });
 });
 

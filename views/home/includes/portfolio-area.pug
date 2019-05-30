@@ -11,128 +11,26 @@
             img(src='assets/images/icon.jpg' alt='title image')
         .portfolio_menu
           ul.filter_menu
-            li.current_menu_item(data-filter='*') Bas&imath;n
-            li(data-filter='.a') Foto Galeri
-            li(data-filter='.b') Blog
+            li.current_menu_item(data-filter='*') Tümü
+            each galeryNavigation in galeryNavigations
+              li(data-filter='.sliderOf_' + galeryNavigation.id) #{galeryNavigation.title}
     .row.li
       .em_load
         // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.c.d
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/custom/images/ef2c249a07eyalcin.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/1.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Daha fazla bilgi...
-                  p
-                    span Bas&imath;n
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.b.c
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/1.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/4.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 2
-                  p
-                    span speech , event
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.d.a
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/5.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/5.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 3
-                  p
-                    span event , vote
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.c.a
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/1.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/4.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 4
-                  p
-                    span vote , speech
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.b.c
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/1.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/2.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 5
-                  p
-                    span campaign,vote
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.c.a
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/1.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/5.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 6
-                  p
-                    span campaign,speech
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.a.b
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/1.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/6b.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 7
-                  p
-                    span speech,event
-        // single portfoloi
-        .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item.d.c
-          .single_portfolio
-            .single_portfolio_inner
-              .single_portfolio_thumb
-                img(src='assets/images/4.jpg' alt='')
-              .single_portfolio_icon
-                a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='assets/images/1.jpg')
-                  i.fa.fa-search
-              .portfolio_content
-                .portfolio_content_inner
-                  h3
-                    a(href='single-blog.html') Demo Media Title 8
-                  p
-                    span campaign,vote
+        each galeryNavigation in galeryNavigations
+          each media in galeryNavigation.galery.medias
+            .col-md-4.col-sm-6.col-lg-3.col-xs-12.grid-item(class= 'sliderOf_' + galeryNavigation.id)
+              .single_portfolio
+                .single_portfolio_inner
+                  .single_portfolio_thumb
+                    img(src=media.url alt='')
+                  .single_portfolio_icon
+                    a.portfolio-icon.venobox.vbox-item(data-gall='myportfolio' href='/assets/images/1.jpg')
+                      i.fa.fa-search
+                  .portfolio_content
+                    .portfolio_content_inner
+                      h3
+                        a(href='/galeries/' + galeryNavigation.galery.id) Daha fazla bilgi...
+                      p
+                        span Bas&imath;n
+        

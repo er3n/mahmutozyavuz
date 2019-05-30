@@ -17,9 +17,9 @@
               li
                 a(href='/') ANASAYFA
               li
-                a(href='/hakkinda') HAKKINDA
+                a(href='#') HAKKINDA
               li
-                a(href='/icerik') HARRAN
+                a(href='#') HARRAN
                 ul.sub-menu
                   each harranNavigation in harranNavigations
                     li
@@ -29,7 +29,7 @@
                 ul.sub-menu
                   each galeryNavigation in galeryNavigations
                     li
-                      a(href='/galerys/' + galeryNavigation.galery.id ) #{galeryNavigation.title}
+                      a(href='/galeries/' + galeryNavigation.galery.id ) #{galeryNavigation.title}
               li
                 a(href='/blog') Blog
             .donate-btn-header
