@@ -294,4 +294,5 @@
     accoll.removeClass("active");
     $(this).addClass("active");
   });
+  
 })(jQuery);
