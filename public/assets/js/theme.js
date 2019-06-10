@@ -118,10 +118,15 @@
     if ($.fn.isotope) {
       var $portfolio = $(".em_load");
 
+      var filter = ".sliderOf_13";
+      if(window.location.pathname.includes('galeries')) {
+        filter = '*';
+      }
+
       $portfolio.isotope({
         itemSelector: ".grid-item",
 
-        filter: ".sliderOf_13",
+        filter: filter,
 
         resizesContainer: true,
 
