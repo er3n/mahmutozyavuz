@@ -3,8 +3,7 @@ var router = express.Router();
 var cmsApi = require("../api/cmsApi");
 
 router.get("/", function(req, res, next) {
-  cmsApi.getBlogs().then(blogsResponse => {
-    console.log("blogsResponse");
+  cmsApi.getAnnouncements().then(blogsResponse => {
     res.render("blog/blog", { title: "Blog", blogs: blogsResponse.data });
   });
 });

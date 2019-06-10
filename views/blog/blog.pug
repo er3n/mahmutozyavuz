@@ -17,10 +17,14 @@ block content
                 .blog_adn_thumb_inner
                   .astute-blog-thumb_adn
                     a(href='/posts/' + blog.post.id)
-                      img(src=blog.image.url alt='blog1')
+                      img(src=blog.image.url alt=blog.title, style="object-fit: cover; height: 300px")
                     .blog_add_icon
                       a(href='/posts/' + blog.post.id)
                         i.fa.fa-link
+                    // BLOG TITLE
+                    .blog-page-title_adn2
+                      h2
+                        a(href='/posts/' + blog.post.id ) #{blog.title}
                 .em-blog-content-area_adn
                   .learn_more_adn
                     a.learn_btn.adnbtn2(href='/posts/' + blog.post.id)
