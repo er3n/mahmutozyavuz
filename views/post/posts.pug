@@ -13,8 +13,7 @@ block content
               .single-blog-content
                 p
                   | !{post.content}
-  .container
-    .row(style='box-sizing: content-box; -webkit-box-sizing: content-box')
-      each media in post.media
-        a.col-md-2.col-sm-6(style='box-sizing: content-box; -webkit-box-sizing: content-box;margin-bottom: 15px' href=media.url target='_blank')
-          img(src=media.url)
+      .row(style='box-sizing: content-box; -webkit-box-sizing: content-box')
+        each media in post.media
+          a.col-md-2.col-sm-6(style='box-sizing: content-box; -webkit-box-sizing: content-box;margin-bottom: 15px' href=media.url target='_blank')
+            img(src=media.url)
