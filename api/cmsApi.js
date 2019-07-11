@@ -15,15 +15,15 @@ const getGalery = id => {
 };
 
 const getAnnouncements = () => {
-  return axios.get(CMS_BASE_PATH + "/announcements");
+  return axios.get(CMS_BASE_PATH + "/announcements?_sort=created_at:DESC");
 };
 
 const getBlogs = () => {
-  return axios.get(CMS_BASE_PATH + "/blogs");
+  return axios.get(CMS_BASE_PATH + "/blogs?_sort=created_at:DESC");
 };
 
 const getVideos = () => {
-  return axios.get(CMS_BASE_PATH + "/videos");
+  return axios.get(CMS_BASE_PATH + "/videos?_sort=created_at:DESC");
 };
 
 module.exports = {
