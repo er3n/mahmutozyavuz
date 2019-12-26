@@ -17,7 +17,7 @@ block content
                 .blog_adn_thumb_inner
                   .astute-blog-thumb_adn
                     a(href='/posts/' + blog.post.id)
-                      img(data-lazysrc=blog.image.url alt=blog.title, style="object-fit: cover; height: 300px")
+                      img.lazy(data-src=blog.image.url alt=blog.title, style="object-fit: cover; height: 300px")
                     .blog_add_icon
                       a(href='/posts/' + blog.post.id)
                         i.fa.fa-link

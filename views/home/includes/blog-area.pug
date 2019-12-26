@@ -7,7 +7,7 @@
           h2 Haberler
           // IMAGE
           .em-image
-            img(data-lazysrc='/assets/images/icon.jpg' alt='title image')
+            img.lazy(data-src='/assets/images/icon.jpg' alt='title image')
           // TEXT
           p.text-alignm G&uuml;ncel haberleri ve detaylar&imath;n&imath; a&scedil;a&gbreve;&imath;da yer alan alandan g&ouml;rebilirsiniz.
     .row
@@ -19,7 +19,7 @@
               .blog_adn_thumb_inner
                 .astute-blog-thumb_adn
                   a(href='/posts/' + announcement.post.id )
-                    img(data-lazysrc=announcement.image.url alt=announcement.title, style="object-fit: cover; height: 300px")
+                    img.lazy(data-src=announcement.image.url alt=announcement.title, style="object-fit: cover; height: 300px")
                   .blog_add_icon
                     a(href='/posts/' + announcement.post.id )
                       i.fa.fa-link
