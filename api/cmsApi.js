@@ -1,6 +1,6 @@
 var axios = require("axios");
 
-const CMS_BASE_PATH = "http://165.22.193.183:1337";
+const CMS_BASE_PATH = "http://167.99.34.150:1337";
 
 const getNavigations = () => {
   return axios.get(CMS_BASE_PATH + "/navigations");
